@@ -1,17 +1,12 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'NodeJS'  // Make sure this matches your Jenkins NodeJS tool
-    }
-
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', 
-    url: 'https://github.com/Simeon51Velev/Text-Compare-Project.git', 
-    credentialsId: 'github-token'
-
+                git branch: 'main',
+                    url: 'https://github.com/Simeon51Velev/Text-Compare-Project.git',
+                    credentialsId: 'github-token'
             }
         }
 
